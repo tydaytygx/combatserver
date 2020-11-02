@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>csgo_server</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tydaytygx/NA/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/tydaytygx/NA/layui.css" />
+</head>
+<body>
+<div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+        <ul class="layui-nav layui-nav-tree layui-nav-side" lay-filter="">
+            <li class="layui-nav-item layui-this"><a href="https://cdn.jsdelivr.net/gh/tydaytygx/NA/index.js">服务器情况</a></li>
+            <li class="layui-nav-item"><a href="http://127.0.0.1/show.html">没有cssの简介</a></li>
+        </ul>
+    </div>
+</div>
+<div class="layui-body layui-tab-content site-demo site-demo-body">
+    <fieldset class="layui-elem-field">
+        <legend>公告</legend>
+        <div class="layui-field-box">
+          喵喵说过，打csgo可以快速找到女朋友 特别是combatserver.cn
+        </div>
+      </fieldset>
+    <!-- <div class="layui-collapse"> -->
+        <!-- <div class="layui-colla-item"> -->
+          <h2 class="layui-colla-title">CSGO</h2>
+          <!-- <div class="layui-colla-content"> -->
+              
+            <div><p class="check_p">Welcome to combatserver</p><p class="hover_check "><img class="check_img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582709248743&di=07a8437ae3b0c057d66cbd547cec01c6&imgtype=0&src=http%3A%2F%2F4.pic.pc6.com%2Fthumb%2Fup%2F2017-9%2F2017915840341789986_600_0.png" class="multiimage 3d_show"/ > </div></p>
+            <% if (csgo.error) { %>
+            <div>服务器消失了: <%=csgo.error %></div>
+            <% } else { %>
+            <div><%=csgo.raw.game%></div>
+            <div>服务器名称:&emsp;<%=csgo.name%></div>
+            <div>目前地图:&emsp;<%=csgo.map%></div>
+            <div>在线人数:&emsp;<%=csgo.raw.numplayers%></div>
+            <div>最大人数:&emsp;<%=csgo.maxplayers%></div>
+            <div>服务器地址1:<br><%=csgo.query.host%></div>
+            <div>服务器地址ip:<br><%=csgo.query.address%></div>
+            <div>
+                <span class="layui-badge-dot layui-bg-green"></span>在线玩家<br>
+                <% csgo.players.forEach(function(v){ %>
+                    <%= v.name %><br>
+                <% }); %>
+            </div>
+            <% } %>
+
+          <!-- </div> -->
+        <!-- </div> -->
+        
+        <!-- <div class="layui-colla-item"> -->
+          <h2 class="layui-colla-title">Minecraft</h2>
+          <!-- <div class="layui-colla-content"> -->
+
+            <div><p class="check_p">Welcome to combatserver</p><p class="hover_check "><img class="check_img" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3438931960,803189743&fm=26&gp=0.jpg" class="multiimage 3d_show"/ > </div></p>
+            <% if (!mc.error) { %>
+            <div><%=mc.raw.game%></div>
+            <div>服务器版本:&emsp;<%=mc.raw.version%></div>
+            <div>在线人数:&emsp;<%=mc.raw.numplayers%></div>
+            <div>最大人数:&emsp;<%=mc.maxplayers%></div>
+            <div>服务器地址1:<br><%=mc.query.host%>:<%=mc.query.port_query%></div>
+            <div>服务器地址ip:<br><%=mc.query.address%>:20601</div>
+            <div>
+                <span class="layui-badge-dot layui-bg-green"></span>在线玩家<br>
+            <%#=JSON.stringify(mc.players) %>
+            
+            <% mc.players.forEach(function(v){ %>
+                <%= v.name %><br>
+            <% }); %>
+            </div>
+            <% } else { %>
+                <div>服务器消失了: <%=mc.error %></div>
+            <% } %>
+
+          <!-- </div> -->
+        <!-- </div>
+      </div> -->
+    
+<hr class="layui-bg-orange">
+<p class="check_p">本站由 Jdao, 勤奋南师姐等大佬技术协力</p><br>
+<div class="check_p console">Jdao的博客https://jdao.online/</div>
+<div class="check_p console">勤奋南师姐的博客https://smilecli.kirarasmile.cn/</div>
+<hr class="layui-bg-orange">
+
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/gh/tydaytygx/NA/layui.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/tydaytygx/NA/index.js"></script> 
+</html>
+        
+

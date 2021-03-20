@@ -60,9 +60,28 @@ h1 span {
   }
 }
 
+.casual {
+  display: block;
+  width: 50px;
+  height: 200px;
+  background-color: #ff4500;
+  transition-duration: 0.5s;
+}
+
+.join_small{
+  font: 10px;
+}
+
 .start_button {
   width: 50%;
-  height: 30%;
+  height: 200px;
   text-align: center;
   background-color: red;
+}
+
+.join_hover:hover {
+  display: block;
+  background-color: #4f4f4f;
+  transition-duration: 0.5s;
+  width: 100%;
 }
